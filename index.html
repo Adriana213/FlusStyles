@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Flu's Style</title>
+  <!-- bootstrap link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- social media icon link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: linen;">
+  <header class="Header-main">
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Flu's Style</a></div>
+        <div class="ul-container">
+          <ul>
+            <li onClick="document.querySelector('.Header-main').scrollIntoView({ behavior: 'smooth' });">
+              Home
+            </li>
+            <li onClick="document.querySelector('.products-section').scrollIntoView({ behavior: 'smooth' });">
+              Products
+            </li>
+            <li class="open-button" onclick="openForm()">
+              Contact Us
+            </li>
+            <!-- contact us form -->
+            <div class="Contact" id="myForm">
+              <form action="/action_page.php" class="contactUs-container">
+                <h1>Login</h1>
+
+                <label for="fname">First Name</label>
+                <input type="text" placeholder="Enter Your Name" name="fname" required>
+
+                <label for="lname">Last Name</label>
+                <input type="text" name="lastname" placeholder="Your last name" required>
+
+                City <input type="text" name="city" placeholder="City">
+
+
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                  style="height:100px; width: 100%;"></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+
+            <!-- cart icon -->
+            <li><i class="fa fa-shopping-cart" style="font-size: 27px"></i> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- the slider of the images -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li id="last_slide" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="summer-outfit-captions-for-instagram-950x500.png" alt="First slide" />
+      </div>
+      <div class="carousel-item">
+        <a href="#summerdress"><img class="d-block w-100"
+            src="women-fashion-target-tout-9e144b6a629249bba7984eabe216c035.jpg" alt="Second slide" /></a>
+      </div>
+      <div class="carousel-item">
+        <a href="#swimPart"><img class="d-block w-100" src="swiming.jpg" alt="Third slide" /></a>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- products section -->
+  <div class="products-section">
+    <div class="products-container">
+      <div class="products-header ">
+        <h1><span class="line">Products</span></h1>
+      </div>
+      <div class="products-list-container">
+
+        <!-- first row first image -->
+        <div class="single-product-container">
+          <div class="product-img" id="summerdress">
+            <img src="colored.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Multi-Color Dress1</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        
+        <!-- first row second image -->
+        <div class="single-product-container ">
+          <div class="product-img">
+            <img src="colored2.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Multi-Color Dress2</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- first row third image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="colored3.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Multi-Color Dress3</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- first row fourth image -->
+        <div class="single-product-container ">
+          <div class="product-img">
+            <img src="purple.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Purple Dress</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- second row first image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="./black_dress.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Black Dress1</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- second row second image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="black_dress2.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Black Dress2</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- second row third image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="black_dress3.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Black Dress3</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- second row fourth image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="black_dress4.jpg" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Black Dress4</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$29.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- third row first image -->
+        <div class="single-product-container">
+          <div class="product-img" id="swimPart">
+            <img src="swim1.webp" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Swimming Suit1</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$14.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- third row second image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="swim2.webp" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Swimming Suit2</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$8.00</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- third row third image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="swim3.webp" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Swimming Suit3</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$15.00</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+        <!-- third row fourth image -->
+        <div class="single-product-container">
+          <div class="product-img">
+            <img src="swim4.webp" alt="" />
+
+          </div>
+          <div class="product-title">
+            <h5>Swimming Suit4</h5>
+          </div>
+
+          <div class="product-price">
+            <p>$9.99</p>
+            <i class="bi bi-cart-plus cart-plus"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+  <!-- footer part -->
+  <div class="footer">
+    <div><a href="https://www.facebook.com/profile.php?id=100063618577936" class="fa fa-facebook"
+        style="margin-left: 50%;"></a></div>
+    <div><a href="https://www.instagram.com/flusstyle/?igshid=MmJiY2I4NDBkZg%3D%3D" class="fa fa-instagram"></a></div>
+
+    <div class="last-container">
+      <div class="CopyRight">
+        <p> © 2023 Flu's Style. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- whatsapp link -->
+  <div><a
+      href="https://api.whatsapp.com/send?phone=96171855466&text=Hi%20there!%20I%20love%20your%20products.%20Please%20contact%20me.%20"
+      class="float">
+      <span class="fa fa-whatsapp my-float"></span>
+    </a></div>
+
+
+  <!-- Cart -->
+  <div class="cart-overlay">
+    <div class="cart-hider-div"></div>
+    <div class="cart">
+      <div class="close-btn">
+        <i class="bi bi-x"></i>
+      </div>
+
+      <h2>Your Bag</h2>
+      <div class="cart-content">
+      
+        </div>
+      <div class="cart-footer">
+        <h4>
+          <i>TOTAL: $<span class="cart-total">0</span></i>
+        </h4>
+        <button class="checkout-btn">
+          <p>Checkout</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>
